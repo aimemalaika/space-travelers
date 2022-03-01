@@ -44,6 +44,10 @@ body {
   font-weight: 800;
 }
 
+.my-profile {
+  border-left: 1px solid black;
+}
+
 @media only screen and (max-width: 468px) {
   .App {
     width: 90%;
@@ -66,5 +70,9 @@ body {
   .menus ul {
     justify-content: space-around;
     color: #fff;
+  }
+
+  .menus ul li {
+    font-size: 0.98em;
   }
 }

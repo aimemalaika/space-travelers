@@ -21,7 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "check-linters": "npx eslint . && npx stylelint **/*.{css,scss}"
+    "check-linters": "npx eslint . && npx stylelint **/*.{css,scss}",
+    "deploy": "netlify deploy --prod --dir=build"
   },
   "eslintConfig": {
     "extends": [

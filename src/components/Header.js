@@ -17,9 +17,9 @@ class Header extends Component {
         </div>
         <div className="menus">
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li>Rockets</li>
+            <li>Mission</li>
+            <li className="my-profile">My Profile</li>
           </ul>
         </div>
       </div>
