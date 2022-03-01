@@ -1,3 +1,78 @@
 body {
   margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', serif;
+}
+
+.App {
+  width: 80%;
+  margin: auto;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.logo {
+  width: 20%;
+  display: flex;
+  line-height: 50px;
+  font-size: 1.5em;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.menus {
+  width: 80%;
+}
+
+.menus ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.menus ul li {
+  padding: 5px 20px;
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+.my-profile {
+  border-left: 1px solid black;
+}
+
+@media only screen and (max-width: 468px) {
+  .App {
+    width: 90%;
+    margin: auto;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .menus {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+  }
+
+  .menus ul {
+    justify-content: space-around;
+    color: #fff;
+  }
+
+  .menus ul li {
+    font-size: 0.98em;
+  }
 }
