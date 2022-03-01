@@ -44,6 +44,16 @@ body {
   font-weight: 800;
 }
 
+/* start edit */
+.menus ul li a {
+  color: blue;
+  text-decoration: none;
+}
+
+.menus ul li a:focus {
+  text-decoration: underline;
+}
+
 .my-profile {
   border-left: 1px solid black;
 }

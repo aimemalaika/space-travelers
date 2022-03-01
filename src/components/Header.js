@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from '../images/planet.png';
 
 class Header extends Component {
@@ -17,8 +18,8 @@ class Header extends Component {
         </div>
         <div className="menus">
           <ul>
-            <li>Rockets</li>
-            <li>Mission</li>
+            <li><NavLink to="/">Rockets</NavLink></li>
+            <li><NavLink to="/mission">Mission</NavLink></li>
             <li className="my-profile">My Profile</li>
           </ul>
         </div>
