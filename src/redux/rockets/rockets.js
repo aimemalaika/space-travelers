@@ -4,10 +4,23 @@ const initialState = {
 
 const FETCH_DATA = 'FETCH_DATA';
 
-export const getFetchData = (payload) => ({
+const getFetchData = (payload) => ({
   type: FETCH_DATA,
   payload,
 });
+
+export const getData = () => async (dispatch) => {
+  const answer = await fetch('https://api.spacexdata.com/v3/rockets');
+  const answerJason = await answer.json();
+  const filterData = answerJason.map((ele) => ({
+    id: ele.id,
+    rocket_name: ele.rocket_name,
+    description: ele.description,
+    flickr_images: ele.flickr_images,
+  }));
+
+  dispatch(getFetchData(filterData));
+};
 
 const reducerRockets = (state = initialState, action) => {
   switch (action.type) {
