@@ -1,76 +1,44 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
-
-# Project Name
-
-> One paragraph statement about the project.
-
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
-
+# LEADBOARD APP
+> The Rockets section displays a list of all available SpaceX rockets. Users can book each rocket by clicking the reservation button or cancel the previously made booking.
+![image](./src/images/space-travelers__rockets.png)
+## Live Preview
+> [Web App Link](https://team-space-ship.netlify.app)
 ## Built With
+- HTML & CSS & JavaScript
+- Html, Css & JavaScript linters
+- React.Js and Redux
 
-- Major languages
-- Frameworks
-- Technologies used
+##### Getting Started
+- clone the repository by running\
+    `git clone https://github.com/aimemalaika/space-travelers.git`
+- navigate to the folder\
+    `cd space-travelers`
+- Install packages\
+    `npm install`
+- Run the app\
+    `npm start`
+- Eject the app\
+    `npm run eject`
+- Create build app\
+    `npm run build`
+- Test Linters app\
+    `npm run check-linters`
+## Authors 
 
-## Live Demo
+👤 **Aime Malaika**
+- GitHub: [@aimemalaika](https://github.com/aimemalaika)
+- Twitter: [@aimemalaika](https://twitter.com/Aime_Malaika)
+- LinkedIn: [@aimemalaika](https://linkedin.com/in/aimemalaika)
 
-[Live Demo Link](https://livedemo.com)
+👤 **Mar Bautista**
+- GitHub: [@marilirulita](https://github.com/marilirulita)
+- Twitter: [@marilirulita](https://twitter.com/marilirulita)
+- LinkedIn: [@marilirulita](https://linkedin.com/in/marilirulita)
 
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
-
-## 🤝 Contributing
-
+## :handshake: Contributing
 Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
-
 ## Show your support
-
-Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](lic.url) licensed.
+Give a :star:️ if you like this project!
+## :memo: License
+This project is [MIT](./MIT.md) licensed.
