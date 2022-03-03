@@ -21,9 +21,17 @@ const Rockets = () => {
   };
 
   const btnCancelation = {
-    color: 'gray',
+    color: '#6d757d',
     backgroundColor: 'white',
-    border: '1px solid gray',
+    border: '1px solid #6d757d',
+  };
+
+  const badge = {
+    backgroundColor: '#18a2b8',
+    color: '#fff',
+    padding: '2px 5px',
+    borderRadius: '5px',
+    marginRight: '10px',
   };
 
   return (
@@ -36,8 +44,11 @@ const Rockets = () => {
 
           <div className="rocket-info">
             <h3>{rock.rocket_name}</h3>
-            <p>{rock.description}</p>
-            <button style={rock.reserved === true ? btnCancelation : btnReserve} id={rock.id} type="submit" onClick={() => reserveCancelRocket(rock.id, rock.reserved)}>{rock.reserved === true ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
+            <p>
+              <span style={rock.reserved === true ? badge : null}>{rock.reserved === true ? 'Reserved' : null}</span>
+              {rock.description}
+            </p>
+            <button style={rock.reserved === true ? btnCancelation : btnReserve} type="submit" onClick={() => reserveCancelRocket(rock.id, rock.reserved)}>{rock.reserved === true ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
           </div>
         </div>
       ))}
