@@ -4,6 +4,10 @@ body {
   font-family: 'Roboto Slab', serif;
 }
 
+h1, h2 {
+  color: #212529;
+}
+
 .App {
   width: 80%;
   margin: auto;
@@ -162,6 +166,25 @@ tr:nth-child(even) {
 
 .profile-container * {
   flex: 1;
+}
+
+.rocket-reserved {
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+}
+
+.rocket-reserved div {
+  border-bottom: 1px solid #dfdfdf;
+  padding: 10px 10px 20px 10px;
+}
+
+.rocket-reserved div h4 {
+  margin: 0;
+  color: #212529;
+}
+
+.rocket-reserved div:last-child {
+  border-bottom: none;
 }
 
 @media only screen and (max-width: 468px) {

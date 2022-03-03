@@ -10,9 +10,9 @@ const Profile = () => {
       </div>
       <div>
       <h2>My Rockets</h2>
-      <div>
+      <div className="rocket-reserved">
         {rockets.map((rocket) => {
-          return <div key={rocket.id}>{rocket.rocket_name}</div>
+          return <div key={rocket.id}><h4>{rocket.rocket_name}</h4></div>
         })}
       </div>
       </div>
