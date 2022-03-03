@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { getData } from '../redux/rockets/rockets';
+import { getData, reserveRocketDispatch } from '../redux/rockets/rockets';
 
 const Rockets = () => {
   const dispatch = useDispatch();
@@ -10,6 +10,10 @@ const Rockets = () => {
   }, []);
 
   const rockets = useSelector((state) => state.reducerRockets);
+
+  const reserveRocket = (id) => {
+    dispatch(reserveRocketDispatch(id));
+  };
 
   return (
     <div className="rockets-list">
@@ -22,7 +26,7 @@ const Rockets = () => {
           <div className="rocket-info">
             <h3>{rock.rocket_name}</h3>
             <p>{rock.description}</p>
-            <button type="submit">Reserve Rocket</button>
+            <button id={rock.id} type="submit" onClick={() => reserveRocket(rock.id)}>Reserve Rocket</button>
           </div>
         </div>
       ))}
