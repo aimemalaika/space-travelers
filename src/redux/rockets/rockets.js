@@ -1,6 +1,4 @@
-const initialState = {
-  rockets: [],
-};
+const initialState = [];
 
 const FETCH_DATA = 'FETCH_DATA';
 
@@ -25,10 +23,7 @@ export const getData = () => async (dispatch) => {
 const reducerRockets = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DATA:
-      return {
-        ...state,
-        rockets: [...action.payload],
-      };
+      return [...action.payload];
     case 'SECOND_ACTION':
       return [];
     default:
