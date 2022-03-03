@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { getMission } from '../redux/missions/mission';
+import { getMission, joinMission } from '../redux/missions/mission';
 
 const Missions = () => {
   const dispatch = useDispatch();
@@ -8,12 +8,14 @@ const Missions = () => {
     dispatch(getMission);
   }, []);
   const missions = useSelector((state) => state.missionReducer);
-  const missionTable = missions.map((mission) => (
-    <tr key={mission.mission_id}>
-      <td>{mission.mission_name}</td>
-      <td>{mission.description}</td>
-      <td className="text-center"><span className="status-field unavailable-ststus">NOT A MEMBER</span></td>
-      <td className="text-center"><button className="button-mission join-mission" type="button">JOIN MISSION</button></td>
+  const missionTable = missions.map(({
+    id, name, description, reserved,
+  }) => (
+    <tr key={id}>
+      <td>{name}</td>
+      <td>{description}</td>
+      <td className="text-center"><span className={(!reserved) ? 'status-field unavailable-status ' : 'status-field available-status'}>{(!reserved) ? 'NOT A MEMBER' : 'ACTIVE MEMBER'}</span></td>
+      <td className="text-center"><button onClick={() => dispatch(joinMission(id))} className={(!reserved) ? 'button-mission join-mission' : 'button-mission leave-mission'} type="button">{(!reserved) ? 'JOIN MISSION' : 'LEAVE MISSION'}</button></td>
     </tr>
   ));
   return (
