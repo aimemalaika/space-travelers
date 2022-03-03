@@ -4,6 +4,7 @@ import { joinMission, leaveMission } from '../redux/missions/mission';
 const Missions = () => {
   const missions = useSelector((state) => state.missionReducer);
   const dispatch = useDispatch();
+  console.log(missions);
   const missionTable = missions.map(({
     id, name, description, reserved,
   }) => (
