@@ -87,14 +87,6 @@ body {
   margin: 0;
 }
 
-.rocket-info button {
-  color: white;
-  background-color: #007bff;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-}
-
 .my-profile {
   border-left: 1px solid black;
 }

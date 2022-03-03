@@ -5,6 +5,7 @@ const FETCH_DATA = 'FETCH_DATA';
 const RESERVE_ROCKET = 'RESERVE_ROCKET';
 const CANCEL_RESERVATION = 'CANCEL_RESERVATION';
 
+// actions
 const getFetchData = (payload) => ({
   type: FETCH_DATA,
   payload,
@@ -35,6 +36,7 @@ export const getData = () => async (dispatch) => {
   dispatch(getFetchData(filterData));
 };
 
+// reducer
 const reducerRockets = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DATA:

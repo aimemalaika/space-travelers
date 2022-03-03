@@ -19,6 +19,22 @@ const Rockets = () => {
     }
   };
 
+  const btnReserve = {
+    color: "white",
+    backgroundColor: "#007bff",
+    padding: "10px",
+    border: "none",
+    borderRadius: "5px",
+  };
+
+  const btnCancelation = {
+    color: "gray",
+    backgroundColor: "white",
+    padding: "10px",
+    border: "1px solid gray",
+    borderRadius: "5px",
+  }
+
   return (
     <div className="rockets-list">
       {rockets.map((rock) => (
@@ -30,7 +46,7 @@ const Rockets = () => {
           <div className="rocket-info">
             <h3>{rock.rocket_name}</h3>
             <p>{rock.description}</p>
-            <button id={rock.id} type="submit" onClick={() => reserveCancelRocket(rock.id, rock.reserved)}>{rock.reserved === true ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
+            <button style={rock.reserved === true ? btnCancelation : btnReserve} id={rock.id} type="submit" onClick={() => reserveCancelRocket(rock.id, rock.reserved)}>{rock.reserved === true ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
           </div>
         </div>
       ))}
