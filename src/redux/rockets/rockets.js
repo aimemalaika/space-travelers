@@ -1,3 +1,4 @@
+ /* eslint-disable max-len */
 const initialState = [];
 
 const FETCH_DATA = 'FETCH_DATA';
