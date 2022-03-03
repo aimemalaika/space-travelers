@@ -179,6 +179,10 @@ tr:nth-child(even) {
   flex: 1;
 }
 
+.profile-container .special-margin {
+  margin-right: 15px;
+}
+
 .rocket-reserved {
   border: 1px solid #dfdfdf;
   border-radius: 5px;

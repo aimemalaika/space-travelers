@@ -4,7 +4,7 @@ const LEAVE_MISSION = 'space-travel/mission/LEAVE_MISSION';
 const BASE_URL = 'https://api.spacexdata.com/v3/missions';
 const initialState = [];
 
-export const getMission = async (dispatch) => {
+export const getMission = () => async (dispatch) => {
   const request = await fetch(BASE_URL);
   if (request.status === 200) {
     const response = await request.json();
