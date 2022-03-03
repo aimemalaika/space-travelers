@@ -6,6 +6,7 @@ body {
 
 h1, h2 {
   color: #212529;
+  margin: 0;
 }
 
 .App {
@@ -15,24 +16,23 @@ h1, h2 {
 
 .header-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  padding: 20px 0;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #dfdfdf;
+  margin-bottom: 20px;
 }
 
 .logo {
-  width: 20%;
   display: flex;
   line-height: 50px;
   font-size: 1.5em;
+  color: #212529;
+  font-weight: bold;
 }
 
 .logo img {
   height: 50px;
-}
-
-.menus {
-  width: 80%;
 }
 
 .menus ul {
@@ -63,7 +63,7 @@ h1, h2 {
   grid-auto-flow: row;
   grid-auto-rows: 1fr;
   gap: 15px;
-  margin: 20px 0;
+  padding: 0 15px;
 }
 
 .rocket-element {
@@ -162,6 +162,7 @@ tr:nth-child(even) {
 
 .profile-container {
   display: flex;
+  padding: 0 20px;
 }
 
 .profile-container * {
@@ -171,6 +172,7 @@ tr:nth-child(even) {
 .rocket-reserved {
   border: 1px solid #dfdfdf;
   border-radius: 5px;
+  margin-top: 5px;
 }
 
 .rocket-reserved div {

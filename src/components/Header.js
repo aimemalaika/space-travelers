@@ -14,7 +14,7 @@ class Header extends Component {
         <div className="logo">
           <img src={logo} alt="Logo" />
           &nbsp;&nbsp;
-          Time Travellers
+          Time Travelers
         </div>
         <div className="menus">
           <ul>
