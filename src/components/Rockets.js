@@ -1,15 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { getData, reserveRocket, cancelReservation } from '../redux/rockets/rockets';
+import { reserveRocket, cancelReservation } from '../redux/rockets/rockets';
 
 const Rockets = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getData());
-  }, []);
-
   const rockets = useSelector((state) => state.reducerRockets);
+
+  const dispatch = useDispatch();
 
   const reserveCancelRocket = (id, status) => {
     if (status === true) {
@@ -33,7 +28,7 @@ const Rockets = () => {
     padding: "10px",
     border: "1px solid gray",
     borderRadius: "5px",
-  }
+  };
 
   return (
     <div className="rockets-list">
