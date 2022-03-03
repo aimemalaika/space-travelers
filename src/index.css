@@ -4,7 +4,8 @@ body {
   font-family: 'Roboto Slab', serif;
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #212529;
   margin: 0;
 }
