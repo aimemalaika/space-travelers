@@ -1,13 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { getMission, joinMission, leaveMission } from '../redux/missions/mission';
+import { joinMission, leaveMission } from '../redux/missions/mission';
 
 const Missions = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getMission);
-  }, []);
   const missions = useSelector((state) => state.missionReducer);
+  const dispatch = useDispatch();
   const missionTable = missions.map(({
     id, name, description, reserved,
   }) => (
