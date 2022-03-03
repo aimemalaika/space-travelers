@@ -141,8 +141,12 @@ tr:nth-child(even) {
   border-radius: 4px;
 }
 
-.unavailable-ststus {
+.unavailable-status {
   background: gray;
+}
+
+.available-status {
+  background: #1b90a8;
 }
 
 .button-mission {
@@ -155,6 +159,11 @@ tr:nth-child(even) {
 .join-mission {
   border: 1px solid gray;
   color: gray;
+}
+
+.leave-mission {
+  border: 1px solid #cd142d;
+  color: #cd142d;
 }
 
 .text-center {
