@@ -16,12 +16,10 @@ export const reserveRocket = (payload) => ({
   payload,
 });
 
-export const cancelReservation = (payload) => {
-  return {
-    type: CANCEL_RESERVATION,
+export const cancelReservation = (payload) => ({
+  type: CANCEL_RESERVATION,
   payload,
-  };
-};
+});
 
 export const getData = () => async (dispatch) => {
   const answer = await fetch('https://api.spacexdata.com/v3/rockets');

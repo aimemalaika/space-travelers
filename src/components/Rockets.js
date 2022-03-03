@@ -15,19 +15,19 @@ const Rockets = () => {
   };
 
   const btnReserve = {
-    color: "white",
-    backgroundColor: "#007bff",
-    padding: "10px",
-    border: "none",
-    borderRadius: "5px",
+    color: 'white',
+    backgroundColor: '#007bff',
+    padding: '10px',
+    border: 'none',
+    borderRadius: '5px',
   };
 
   const btnCancelation = {
-    color: "gray",
-    backgroundColor: "white",
-    padding: "10px",
-    border: "1px solid gray",
-    borderRadius: "5px",
+    color: 'gray',
+    backgroundColor: 'white',
+    padding: '10px',
+    border: '1px solid gray',
+    borderRadius: '5px',
   };
 
   return (
