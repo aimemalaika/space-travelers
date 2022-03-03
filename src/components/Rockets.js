@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { getData, reserveRocketDispatch } from '../redux/rockets/rockets';
+import { getData, reserveRocket, cancelReservation } from '../redux/rockets/rockets';
 
 const Rockets = () => {
   const dispatch = useDispatch();
@@ -11,8 +11,12 @@ const Rockets = () => {
 
   const rockets = useSelector((state) => state.reducerRockets);
 
-  const reserveRocket = (id) => {
-    dispatch(reserveRocketDispatch(id));
+  const reserveCancelRocket = (id, status) => {
+    if (status === true) {
+      dispatch(cancelReservation(id));
+    } else {
+      dispatch(reserveRocket(id));
+    }
   };
 
   return (
@@ -26,7 +30,7 @@ const Rockets = () => {
           <div className="rocket-info">
             <h3>{rock.rocket_name}</h3>
             <p>{rock.description}</p>
-            <button id={rock.id} type="submit" onClick={() => reserveRocket(rock.id)}>Reserve Rocket</button>
+            <button id={rock.id} type="submit" onClick={() => reserveCancelRocket(rock.id, rock.reserved)}>{rock.reserved === true ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
           </div>
         </div>
       ))}
