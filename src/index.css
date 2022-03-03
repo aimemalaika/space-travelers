@@ -4,6 +4,12 @@ body {
   font-family: 'Roboto Slab', serif;
 }
 
+h1,
+h2 {
+  color: #212529;
+  margin: 0;
+}
+
 .App {
   width: 80%;
   margin: auto;
@@ -11,24 +17,23 @@ body {
 
 .header-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  padding: 20px 0;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #dfdfdf;
+  margin-bottom: 20px;
 }
 
 .logo {
-  width: 20%;
   display: flex;
   line-height: 50px;
   font-size: 1.5em;
+  color: #212529;
+  font-weight: bold;
 }
 
 .logo img {
   height: 50px;
-}
-
-.menus {
-  width: 80%;
 }
 
 .menus ul {
@@ -44,12 +49,13 @@ body {
   font-weight: 800;
 }
 
-.menus ul li a {
+.inactive {
   color: #007bff;
   text-decoration: none;
 }
 
-.menus ul li a:focus {
+.active {
+  color: #007bff;
   text-decoration: underline;
 }
 
@@ -58,7 +64,7 @@ body {
   grid-auto-flow: row;
   grid-auto-rows: 1fr;
   gap: 15px;
-  margin: 20px 0;
+  padding: 0 15px;
 }
 
 .rocket-element {
@@ -153,6 +159,35 @@ tr:nth-child(even) {
 
 .text-center {
   text-align: center;
+}
+
+.profile-container {
+  display: flex;
+  padding: 0 20px;
+}
+
+.profile-container * {
+  flex: 1;
+}
+
+.rocket-reserved {
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.rocket-reserved div {
+  border-bottom: 1px solid #dfdfdf;
+  padding: 10px 10px 20px 10px;
+}
+
+.rocket-reserved div h4 {
+  margin: 0;
+  color: #212529;
+}
+
+.rocket-reserved div:last-child {
+  border-bottom: none;
 }
 
 @media only screen and (max-width: 468px) {
