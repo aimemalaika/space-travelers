@@ -1,18 +1,29 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { getData, reserveRocketDispatch } from '../redux/rockets/rockets';
+import { reserveRocket, cancelReservation } from '../redux/rockets/rockets';
 
 const Rockets = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getData());
-  }, []);
-
   const rockets = useSelector((state) => state.reducerRockets);
 
-  const reserveRocket = (id) => {
-    dispatch(reserveRocketDispatch(id));
+  const dispatch = useDispatch();
+
+  const reserveCancelRocket = (id, status) => {
+    if (status === true) {
+      dispatch(cancelReservation(id));
+    } else {
+      dispatch(reserveRocket(id));
+    }
+  };
+
+  const btnReserve = {
+    color: 'white',
+    backgroundColor: '#007bff',
+    border: 'none',
+  };
+
+  const btnCancelation = {
+    color: 'gray',
+    backgroundColor: 'white',
+    border: '1px solid gray',
   };
 
   return (
@@ -26,7 +37,7 @@ const Rockets = () => {
           <div className="rocket-info">
             <h3>{rock.rocket_name}</h3>
             <p>{rock.description}</p>
-            <button id={rock.id} type="submit" onClick={() => reserveRocket(rock.id)}>Reserve Rocket</button>
+            <button style={rock.reserved === true ? btnCancelation : btnReserve} id={rock.id} type="submit" onClick={() => reserveCancelRocket(rock.id, rock.reserved)}>{rock.reserved === true ? 'Cancel Reservation' : 'Reserve Rocket'}</button>
           </div>
         </div>
       ))}

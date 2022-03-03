@@ -88,10 +88,8 @@ body {
 }
 
 .rocket-info button {
-  color: white;
-  background-color: #007bff;
+  font-weight: bold;
   padding: 10px;
-  border: none;
   border-radius: 5px;
 }
 
