@@ -44,12 +44,13 @@ body {
   font-weight: 800;
 }
 
-.menus ul li a {
+.inactive {
   color: #007bff;
   text-decoration: none;
 }
 
-.menus ul li a:focus {
+.active {
+  color: #007bff;
   text-decoration: underline;
 }
 
@@ -153,6 +154,14 @@ tr:nth-child(even) {
 
 .text-center {
   text-align: center;
+}
+
+.profile-container {
+  display: flex;
+}
+
+.profile-container * {
+  flex: 1;
 }
 
 @media only screen and (max-width: 468px) {

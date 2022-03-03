@@ -18,9 +18,9 @@ class Header extends Component {
         </div>
         <div className="menus">
           <ul>
-            <li><NavLink to="/">Rockets</NavLink></li>
-            <li><NavLink to="/mission">Mission</NavLink></li>
-            <li className="my-profile">My Profile</li>
+            <li><NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Rockets</NavLink></li>
+            <li><NavLink to="/mission" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Mission</NavLink></li>
+            <li className="my-profile" ><NavLink to="/profile" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>My Profile</NavLink></li>
           </ul>
         </div>
       </div>
