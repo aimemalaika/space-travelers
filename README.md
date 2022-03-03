@@ -33,8 +33,8 @@
 
 👤 **Mar Bautista**
 - GitHub: [@marilirulita](https://github.com/marilirulita)
-- Twitter: [@marilirulita](https://twitter.com/marilirulita)
-- LinkedIn: [@marilirulita](https://linkedin.com/in/marilirulita)
+- Twitter: [@marilirulita](https://twitter.com/marylirulita)
+- LinkedIn: [@marilirulita](https://www.linkedin.com/in/marbautista/)
 
 ## :handshake: Contributing
 Contributions, issues, and feature requests are welcome!
