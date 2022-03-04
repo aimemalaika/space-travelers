@@ -18,8 +18,8 @@ const Missions = () => {
     <tr key={id}>
       <td>{name}</td>
       <td>{description}</td>
-      <td className="text-center"><span className={(!reserved) ? 'status-field unavailable-status ' : 'status-field available-status'}>{(!reserved) ? 'NOT A MEMBER' : 'ACTIVE MEMBER'}</span></td>
-      <td className="text-center"><button onClick={() => dispatch((!reserved) ? joinMission(id) : leaveMission(id))} className={(!reserved) ? 'button-mission join-mission' : 'button-mission leave-mission'} type="button">{(!reserved) ? 'JOIN MISSION' : 'LEAVE MISSION'}</button></td>
+      <td className="text-center"><span className={(!reserved && 'status-field unavailable-status') || (reserved && 'status-field available-status')}>{(!reserved && 'NOT A MEMBER') || (reserved && 'ACTIVE MEMBER')}</span></td>
+      <td className="text-center"><button onClick={() => dispatch((!reserved && joinMission(id)) || (reserved && leaveMission(id)))} className={(!reserved && 'button-mission join-mission') || (reserved && 'button-mission leave-mission')} type="button">{(!reserved && 'JOIN MISSION') || (reserved && 'LEAVE MISSION')}</button></td>
     </tr>
   ));
   return (
