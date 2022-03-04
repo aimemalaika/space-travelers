@@ -45,10 +45,18 @@ const Rockets = () => {
           <div className="rocket-info">
             <h3>{rock.rocket_name}</h3>
             <p>
-              <span style={(rock.reserved ? badge : null)}>{(rock.reserved ? 'Reserved' : ' ')}</span>
+              {rock.reserved && (
+                <span style={rock.reserved && badge}>Reserved</span>
+              )}
               {rock.description}
             </p>
-            <button style={(!rock.reserved ? btnReserve : btnCancelation)} type="submit" onClick={() => reserveCancelRocket(rock.id, rock.reserved)}>{(!rock.reserved ? 'Reserve Rockets' : 'Cancel Reservation')}</button>
+            <button
+              style={(!rock.reserved && btnReserve) || (rock.reserved && btnCancelation)}
+              type="submit"
+              onClick={() => reserveCancelRocket(rock.id, rock.reserved)}
+            >
+              {(!rock.reserved && 'Reserve Rockets') || (rock.reserved && 'Cancel Reservation')}
+            </button>
           </div>
         </div>
       ))}
